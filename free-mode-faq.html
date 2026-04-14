@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-min.css?v=3" />
+    <title>Guides - Foundry Companion App</title>
+    <meta name="description" content="Guides for using the Foundry Companion App." />
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <meta name="theme-color" content="var(--bg-color)">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="logo-login" class="logo">
+            <svg viewBox="10 -5 175 175" xmlns="http://www.w3.org/2000/svg" aria-label="Foundry Companion App Logo" >
+                <g fill="var(--accent-bg-1)" stroke="var(--body-txt)" stroke-width="2.5" stroke-linejoin="round" >
+                    <!-- D20 Outline -->
+                    <polygon points="100,10 180,60 160,160 40,160 20,60" />
+                    <!-- Inner lines -->
+                    <line x1="100" y1="10" x2="40" y2="160" />
+                    <line x1="100" y1="10" x2="160" y2="160" />
+                    <line x1="20" y1="60" x2="180" y2="60" />
+                    <line x1="20" y1="60" x2="100" y2="160" />
+                    <line x1="180" y1="60" x2="100" y2="160" />
+                </g>
+
+                <!-- Center letters -->
+                <g fill="var(--body-txt)" font-weight="450" text-anchor="middle" dominant-baseline="middle">
+                    <text x="100" y="82">F</text>
+                    <text x="100" y="107">C</text>
+                    <text x="100" y="132">A</text>
+                </g>
+            </svg>
+        </a>
+        
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <!-- <a href="#home-info" class="nav-btn">App</a> -->
+            <!-- <a href="#home-memberships" class="nav-btn">Memberships</a> -->
+            <!-- <a href="#home-guides" class="nav-btn">Guides</a> -->
+            <a href="#home-about-contact" class="nav-btn">Contact</a>
+            <!-- <a href="https://www.patreon.com/foundrycompanionapp" target="_blank" class="nav-btn">Patreon</a> -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="guide">
+            <a href="guides.html" class="a-btn next-btn">< Back to Guides</a>
+        </section>
+
+        <section class="guide info">
+            <h1>Free Mode FAQ</h1>
+            <p>This page answers common questions about what happens in free bridge mode and offline mode.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">What is free bridge mode?</h2>
+            <p>Free bridge mode means you are connected to Foundry, but using the free version of the <span class="bold">Companion Bridge</span> module. You can load your character and you will receive updates from the server, however, interactions from to app to the srever are unavailable.</p>
+
+            <p class="bold margin-bottom-minus">Typical result:</p>
+            <ul class="home-section-details-section-list">
+                <li>Most sheet edits still work locally in the app.</li>
+                <li>Server-executed actions are blocked.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">What is offline mode?</h2>
+            <p>Offline mode means there is no active Foundry socket connection.</p>
+
+            <p class="bold margin-bottom-minus">Typical result:</p>
+            <ul class="home-section-details-section-list">
+                <li>You can keep using cached actor data.</li>
+                <li>All server-side actions are unavailable.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Can I still load my character in free mode?</h2>
+            <p>
+                Yes, when connected.
+                <br><br>
+                In offline mode, you cannot pull fresh server data, but you can load a previously cached local actor.
+            </p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Can I still update HP, counters, and toggles?</h2>
+            <p>
+                Yes, usually as local-only updates in restricted modes.
+                <br><br>
+                These updates are reflected in the app UI and local cache behavior, but not on the Foundry server or in other connected sessions.
+            </p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Can I cast spells in free mode?</h2>
+            <p>You can still use local spell tracking behavior (for example spell slots), but remote cast/use actions that require bridge support are blocked.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Can I do short rest and long rest in free mode?</h2>
+            <p>
+                Not as server-executed actions.
+                <br><br>
+                Rest actions are premium online features and are blocked in free/offline modes because they rely on server connectivity.            
+            </p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">What does "Saved locally" mean?</h2>
+            <p>It means your change was accepted in the app state but not executed as a server update in Foundry.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Can I still use favorites in free/offline mode?</h2>
+            <p>Yes. Favorites can still be changed locally and used for quick access.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Why do actions suddenly stop syncing during play?</h2>
+            <p class="bold margin-bottom-minus">Common causes:</p>
+            <ol class="home-section-details-section-list">
+                <li>GM-host browser session closed or disconnected.</li>
+                <li>Connection dropped and app switched to offline mode.</li>
+                <li>Current bridge tier does not allow that action.</li>
+            </ol>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">How can I quickly tell what mode I am in?</h2>
+            <p class="bold margin-bottom-minus">Mode indicators:</p>
+            <ol class="home-section-details-section-list">
+                <li>No specific indicator at the top of the sheet: <span class="bold">premium online</span></li>
+                <li><span style="font: italic;">Local Mode: Free Tier</span> indicator at the top of the sheet: <span class="bold">free mode online</span></li>
+                <li><span style="font: italic;">Local Mode: Offline</span> indicator at the top of the sheet: <span class="bold">offline mode</span></li>
+            </ol>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Best practice for free mode sessions</h2>
+            <ol class="home-section-details-section-list">
+                <li>Treat the app as a fast local tracker.</li>
+                <li>Keep notes of server-critical outcomes to apply once fully connected.</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="home-about-contact">
+            <div class="home-sections">
+                <h3 class="home-section-intro-title contact-us-title">Contact Us</h3>
+                <p>If you have any questions, feedback, or need support, please don't hesitate to reach out to us. You can contact us through the following channels:</p>
+                <div class="contact-btns">
+                    <a class="a-btn next-btn" href="mailto:foundrycompanionapp@gmail.com">Email</a>
+                    <a class="a-btn next-btn" href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon DM</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Foundry Companion App. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <p>-</p>
+            <a href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon</a>
+        </div>
+    </footer>
+</body>
+
+</html>

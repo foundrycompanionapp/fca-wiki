@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# 1. Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. STRIP "/index" or "/index.html" to Root "/"
+# This ensures domain.com/index turns into domain.com/
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s(.*)/index(\.html)?\s [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# 3. External Redirect: Remove .html from other files (legal.html -> /legal)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 4. Internal Rewrite: Map extensionless URLs to .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

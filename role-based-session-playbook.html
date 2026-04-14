@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-min.css?v=3" />
+    <title>Guides - Foundry Companion App</title>
+    <meta name="description" content="Guides for using the Foundry Companion App." />
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <meta name="theme-color" content="var(--bg-color)">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="logo-login" class="logo">
+            <svg viewBox="10 -5 175 175" xmlns="http://www.w3.org/2000/svg" aria-label="Foundry Companion App Logo" >
+                <g fill="var(--accent-bg-1)" stroke="var(--body-txt)" stroke-width="2.5" stroke-linejoin="round" >
+                    <!-- D20 Outline -->
+                    <polygon points="100,10 180,60 160,160 40,160 20,60" />
+                    <!-- Inner lines -->
+                    <line x1="100" y1="10" x2="40" y2="160" />
+                    <line x1="100" y1="10" x2="160" y2="160" />
+                    <line x1="20" y1="60" x2="180" y2="60" />
+                    <line x1="20" y1="60" x2="100" y2="160" />
+                    <line x1="180" y1="60" x2="100" y2="160" />
+                </g>
+
+                <!-- Center letters -->
+                <g fill="var(--body-txt)" font-weight="450" text-anchor="middle" dominant-baseline="middle">
+                    <text x="100" y="82">F</text>
+                    <text x="100" y="107">C</text>
+                    <text x="100" y="132">A</text>
+                </g>
+            </svg>
+        </a>
+        
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <!-- <a href="#home-info" class="nav-btn">App</a> -->
+            <!-- <a href="#home-memberships" class="nav-btn">Memberships</a> -->
+            <!-- <a href="#home-guides" class="nav-btn">Guides</a> -->
+            <a href="#home-about-contact" class="nav-btn">Contact</a>
+            <!-- <a href="https://www.patreon.com/foundrycompanionapp" target="_blank" class="nav-btn">Patreon</a> -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="guide">
+            <a href="guides.html" class="a-btn next-btn">< Back to Guides</a>
+        </section>
+
+        <section class="guide info">
+            <h1>Role-Based And Session Playbook</h1>
+            <p>Use this page for practical session flow, based on player role and game phase.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Host Requirement (Read First)</h2>
+            <ul class="home-section-details-section-list">
+                <li>A GM user must be logged into Foundry in a browser while playing.</li>
+                <li>The <span class="bold">Companion Bridge</span> module runs in that browser session.</li>
+                <li>If no GM-hosted browser session is active, live sheet loading and bridge interactions are unavailable.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Player vs GM Quick Expectations</h2>
+            <h3 class="margin-bottom-minus margin-top-plus">Player</h3>
+            <ul class="home-section-details-section-list">
+                <li><span>Primary goal:</span> run your own character from phone/tablet.</li>
+                <li><span>Typical actions:</span> check stats, cast spells, track HP/resources, manage favorites, write journal notes.</li>
+                <li>In restricted modes, continue with local tracking and reconnect later.</li>
+            </ul>
+
+            <h3 class="margin-bottom-minus margin-top-plus">GM (as bridge host)</h3>
+            <ul class="home-section-details-section-list">
+                <li>Keep Foundry world open in a browser during play.</li>
+                <li>Ensure the <span class="bold">Companion Bridge</span> module is enabled and world is active.</li>
+                <li>Help players reconnect if bridge-host browser session drops.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Session Workflow By Phase</h2>
+            <h3 class="margin-bottom-minus margin-top-plus">1. Before Session Starts</h3>
+            <ol class="home-section-details-section-list">
+                <li>Confirm a GM browser session is active in Foundry.</li>
+                <li>Open app and connect to server URL.</li>
+                <li>Select user and character.</li>
+                <li>Pin Quick Tabs for your role:</li>
+                <ul>
+                    <li><span>Combat-heavy:</span> Core Stats, Spellbook, Inventory, Favorites.</li>
+                    <li><span>Exploration-heavy:</span> Core Stats, Skills, Inventory, Journal.</li>
+                </ul>
+                <li>Do a quick health check:</li>
+                <ul>
+                    <li>Cast one cantrip or toggle one slot.</li>
+                    <li>Toggle one favorite.</li>
+                    <li>Open one container.</li>
+                </ul>
+            </ol>
+
+            <p class="bold margin-bottom-minus">Expected Result:</p>
+            <ul class="home-section-details-section-list">
+                <li>All core interactions work in your current mode.</li>
+            </ul>
+
+
+            <h3 class="margin-bottom-minus margin-top-plus">2. During Combat</h3>
+            <p class="bold margin-bottom-minus">Recommended loop:</p>
+            <ol class="home-section-details-section-list">
+                <li>Use Core Stats for HP and temporary HP adjustments.</li>
+                <li>Use Spellbook for cast/slot tracking and preparation toggles.</li>
+                <li>Use Favorites tab for fastest access to repeated actions.</li>
+            </ol>
+
+            <p class="bold margin-bottom-minus">Tips:</p>
+            <ul class="home-section-details-section-list">
+                <li>If an action is blocked (free/offline), continue with local updates and communicate outcomes at table.</li>
+                <li>Use Journal for quick combat notes (targets, concentration reminders, turn plans).</li>
+            </ul>
+
+            <h3 class="margin-bottom-minus margin-top-plus">3. During Exploration And RP</h3>
+            <ol class="home-section-details-section-list">
+                <li>Use Skills and Character tabs for checks and references.</li>
+                <li>Capture clues and plans in Journal entries.</li>
+                <li>Keep Favorites curated for recurring utility items/spells.</li>
+            </ol>
+
+            <h3 class="margin-bottom-minus margin-top-plus">4. After Encounters</h3>
+            <ol class="home-section-details-section-list">
+                <li>Review HP/temp HP state.</li>
+                <li>Apply short rest or long rest if available in current mode.</li>
+                <li>Validate prepared spells and slot circles.</li>
+                <li>Update journal summary for continuity.</li>
+            </ol>
+
+            <h3 class="margin-bottom-minus margin-top-plus">5. End Of Session</h3>
+            <ol class="home-section-details-section-list">
+                <li>Confirm your latest state is synced with the server.</li>
+                <li>Leave app normally; session restore will attempt to recover on next open.</li>
+            </ol>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Fast Recovery Checklist</h2>
+            <p class="bold margin-bottom-minus">Use this when things break mid-session:</p>
+            <ol class="home-section-details-section-list">
+                <li>Verify GM-host browser session is still active.</li>
+                <li>Reconnect server and reopen actor.</li>
+                <li>If still unavailable, load local cached actor.</li>
+                <li>Continue tracking locally until online connection is restored.</li>
+                <li>If nothing works, feel free to contact us by sending an email or direct message on Patreon.</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="home-about-contact">
+            <div class="home-sections">
+                <h3 class="home-section-intro-title contact-us-title">Contact Us</h3>
+                <p>If you have any questions, feedback, or need support, please don't hesitate to reach out to us. You can contact us through the following channels:</p>
+                <div class="contact-btns">
+                    <a class="a-btn next-btn" href="mailto:foundrycompanionapp@gmail.com">Email</a>
+                    <a class="a-btn next-btn" href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon DM</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Foundry Companion App. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <p>-</p>
+            <a href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon</a>
+        </div>
+    </footer>
+</body>
+
+</html>

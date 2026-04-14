@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-min.css?v=3" />
+    <title>Guides - Foundry Companion App</title>
+    <meta name="description" content="Guides for using the Foundry Companion App." />
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <meta name="theme-color" content="var(--bg-color)">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="logo-login" class="logo">
+            <svg viewBox="10 -5 175 175" xmlns="http://www.w3.org/2000/svg" aria-label="Foundry Companion App Logo" >
+                <g fill="var(--accent-bg-1)" stroke="var(--body-txt)" stroke-width="2.5" stroke-linejoin="round" >
+                    <!-- D20 Outline -->
+                    <polygon points="100,10 180,60 160,160 40,160 20,60" />
+                    <!-- Inner lines -->
+                    <line x1="100" y1="10" x2="40" y2="160" />
+                    <line x1="100" y1="10" x2="160" y2="160" />
+                    <line x1="20" y1="60" x2="180" y2="60" />
+                    <line x1="20" y1="60" x2="100" y2="160" />
+                    <line x1="180" y1="60" x2="100" y2="160" />
+                </g>
+
+                <!-- Center letters -->
+                <g fill="var(--body-txt)" font-weight="450" text-anchor="middle" dominant-baseline="middle">
+                    <text x="100" y="82">F</text>
+                    <text x="100" y="107">C</text>
+                    <text x="100" y="132">A</text>
+                </g>
+            </svg>
+        </a>
+        
+        <nav>
+            <a href="index.html" class="nav-btn">Home</a>
+            <!-- <a href="#home-info" class="nav-btn">App</a> -->
+            <!-- <a href="#home-memberships" class="nav-btn">Memberships</a> -->
+            <!-- <a href="#home-guides" class="nav-btn">Guides</a> -->
+            <a href="#home-about-contact" class="nav-btn">Contact</a>
+            <!-- <a href="https://www.patreon.com/foundrycompanionapp" target="_blank" class="nav-btn">Patreon</a> -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="guide">
+            <a href="guides.html" class="a-btn next-btn">< Back to Guides</a>
+        </section>
+
+        <section class="guide info">
+            <h1>Free vs Premium Modules</h1>
+            <p>This matrix describes what users can do in each mode.</p>
+
+            <p class="bold margin-bottom-minus margin-top-plus">Mode definitions:</p>
+            <ul class="home-section-details-section-list">
+                <li><span class="bold">Premium Mode:</span> Connected socket and <span class="bold">Companion Bridge</span> supports update/roll actions.</li>
+                <li><span class="bold">Free Mode:</span> Connected socket but <span class="bold">Companion Bridge</span> rejects interactions from the app.</li>
+                <li><span class="bold">Offline Mode:</span> No active socket connection.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Capability Matrix</h2>
+            <div class="table-scroll-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Premium Online</th>
+                            <th>Free Mode</th>
+                            <th>Offline Mode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Connect, login, select actor</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Load local cached actor</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Browse actor sheet data</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes (cached)</td>
+                        </tr>
+                        <tr>
+                            <td>Search and filter rows</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Quick tabs pin/unpin</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Journal notes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Toggle favorites</td>
+                            <td>Synced to Foundry</td>
+                            <td>Local-only</td>
+                            <td>Local-only</td>
+                        </tr>
+                        <tr>
+                            <td>Update actor values (HP, counters, toggles)</td>
+                            <td>Synced to Foundry</td>
+                            <td>Local-only</td>
+                            <td>Local-only</td>
+                        </tr>
+                        <tr>
+                            <td>Update item values (spell prepared, item flags)</td>
+                            <td>Synced to Foundry</td>
+                            <td>Local-only</td>
+                            <td>Local-only</td>
+                        </tr>
+                        <tr>
+                            <td>Delete active effects</td>
+                            <td>Synced to Foundry</td>
+                            <td>Local-only</td>
+                            <td>Local-only</td>
+                        </tr>
+                        <tr>
+                            <td>Cast remote spell/item actions (attack/save/use item)</td>
+                            <td>Yes</td>
+                            <td>Blocked</td>
+                            <td>Blocked</td>
+                        </tr>
+                        <tr>
+                            <td>Rest actions (short/long)</td>
+                            <td>Yes</td>
+                            <td>Blocked</td>
+                            <td>Blocked</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">What Users See In Restricted Modes</h2>
+
+            <p class="bold margin-bottom-minus">When an action is restricted, users may see local-mode feedback such as:</p>
+            <ul class="home-section-details-section-list">
+                <li>Saved locally because server updates are unavailable.</li>
+                <li>Action requires premium tier.</li>
+                <li>Action requires active connection.</li>
+            </ul>
+
+            <p class="bold margin-bottom-minus">Practical interpretation:</p>
+            <ul class="home-section-details-section-list">
+                <li>Sheet edits often continue locally.</li>
+                <li>Server-side game actions (like remote rolls and rest execution) require premium online capability.</li>
+            </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Usage Recommendations</h2>
+            <ul class="home-section-details-section-list">
+                <li>Use Free version to test the app's features.</li>
+                <li>Use Premium online for full gameplay parity with Foundry actions.</li>
+                <li>Use Offline as continuity mode for tracking and note-taking when full sync is unavailable.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="home-about-contact">
+            <div class="home-sections">
+                <h3 class="home-section-intro-title contact-us-title">Contact Us</h3>
+                <p>If you have any questions, feedback, or need support, please don't hesitate to reach out to us. You can contact us through the following channels:</p>
+                <div class="contact-btns">
+                    <a class="a-btn next-btn" href="mailto:foundrycompanionapp@gmail.com">Email</a>
+                    <a class="a-btn next-btn" href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon DM</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Foundry Companion App. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <p>-</p>
+            <a href="https://www.patreon.com/foundrycompanionapp" target="_blank">Patreon</a>
+        </div>
+    </footer>
+</body>
+
+</html>

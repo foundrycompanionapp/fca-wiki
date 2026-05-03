@@ -71,49 +71,82 @@
 
             <!--  -->
 
-            <h2 class="home-section-details-section-title">Search And Filters</h2>
-            <p class="margin-bottom-minus">Search bars are tab-local and filter rows in real time.</p>
-
+            <h2 class="home-section-details-section-title">Health, Temp HP, And Rest</h2>
+            <p class="margin-bottom-minus">Click on the health bar to open health controls and apply damage, healing, temporary HP, and max HP modifier.</p>
             <ul class="home-section-details-section-list">
-                <li>Type in a tab search bar to hide non-matching rows.</li>
-                <li>Focusing a search bar clears text and resets visibility.</li>
+                <li>Damage subtracts temporary HP first, then current HP.</li>
+                <li>Healing cannot exceed current max HP.</li>
+                <li>Active temporary HP locks input until reset.</li>
+                <li>Max HP modifier are shown in details in the health controls (e.g. "35 / 40 (35+5)") but only final result is displayed in the health bar (e.g. "35 / 40").</li>
+                <li>Max HP modifiers stack on top of each other, you can reset them all at once with the "Reset" button.</li>
             </ul>
 
-            <p class="bold margin-bottom-minus">Filter dialogs support 3-state options:</p>
-            <ul class="home-section-details-section-list">
-                <li>Neutral</li>
-                <li>Include</li>
-                <li>Exclude</li>
-            </ul>
-
-            <p class="bold margin-bottom-minus">Workflow:</p>
+            <h3 class="margin-bottom-minus margin-top-plus">Short And Long Rest</h3>
             <ol class="home-section-details-section-list">
-                <li>Open a filter dialog for spells or inventory.</li>
-                <li>Toggle options until desired state.</li>
-                <li>Apply to close and run filtering.</li>
-                <li>Reset to clear selected criteria.</li>
+                <li>Open short or long rest dialog from the side panel.</li>
+                <li>Choose options (New Day, Auto-Hit Dice, etc.).</li>
+                <li>Confirm rest action.</li>
             </ol>
+
+            <p class="bold margin-bottom-minus">Mode Note:</p>
+            <ul class="home-section-details-section-list">
+                <li>The app relies on the server to apply rest mechanics, recover resources, etc. In restricted modes, local data won't change.</li>
+            </ul>
 
             <!--  -->
 
-            <h2 class="home-section-details-section-title">Favorites</h2>
-            <p>Favorites let you pin frequently used items/spells/features.</p>
-
-            <p class="bold margin-bottom-minus margin-top-plus">To toggle a favorite:</p>
+            <h2 class="home-section-details-section-title">Core Stats</h2>
+            <p class="margin-bottom-minus">The "Core Stats" tab displays a few fundamental attributes of your character.</p>
+            <ul class="home-section-details-section-list">
+                <li>AC, Initiative and Proficiency bonus, and Passive Perception.</li>
+                <li>Currently applied conditions.</li>
+                <li>Exhaustion and Death Saving Throws trackers.</li>
+                <li>Speeds.</li>
+                <li>Hit Dice amount and denomination.</li>
+            </ul>
+            
+            <h3 class="margin-bottom-minus margin-top-plus">Condition Interaction</h3>
             <ol class="home-section-details-section-list">
-                <li>Open any row with a favorite icon.</li>
-                <li>Select the bookmark button.</li>
+                <li>Tap a condition badge..</li>
+                <li>Condition dialog opens with name and description.</li>
+                <li>In the condition dialog, select "Remove Condition" to remove it.</li>
             </ol>
 
-            <p class="bold margin-bottom-minus">Expected behavior:</p>
+            <p class="bold margin-bottom-minus">Mode Note:</p>
             <ul class="home-section-details-section-list">
-                <li>Favorite state updates both in source list and Favorites tab.</li>
-                <li>Favorites are actor-specific and synced with the server.</li>
+                <li>If server update is not possible, condition removal will only be applied locally.</li>
             </ul>
 
-            <p class="bold margin-bottom-minus">Mode note:</p>
+            <h3 class="margin-bottom-minus margin-top-plus">Hit Dice Dialog</h3>
+            <p>You can press and the Hit Dice section to open the dialog and manage your hit dice and healing.</p>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Character Details</h2>
+            <p class="margin-bottom-minus">The "Character" tab contains various character information and traits.</p>
             <ul class="home-section-details-section-list">
-                <li>In local modes, favorite changes can still be saved locally.</li>
+                <li>Classes, Subclasses, race, Background, Alignment.</li>
+                <li>Languages, Senses, Armor/Weapon Proficiencies.</li>
+                <li>Resistances, Immunities, and Vulnerabilities.</li>
+                <li>Personality Traits, Ideals, Bonds, and Flaws.</li>
+            </ul>
+
+            <!--  -->
+            
+            <h2 class="home-section-details-section-title">Skills, Saves, Abilities and Tools</h2>
+            <p class="margin-bottom-minus">Skills, saves, abilities and tools are visible in the "Skills" tab.</p>
+            <ul class="home-section-details-section-list">
+                <li>You can roll any of them just by clicking on the respective entry.</li>
+                <li>For the skills, the first number represents the skill modifier (e.g. +2), and the second number represents the passive score (e.g. 12).</li>
+                <li>Proficiency is reflected in this way:
+                    <ul class="home-section-details-section-list">
+                        <li>No proficiency: Empty circle.</li>
+                        <li>Proficient: Filled circle.</li>
+                        <li>Expertise: Double circle.</li>
+                        <li>Half proficiency: Half-filled circle.</li>
+                    </ul>
+                </li>
+                <li class="italic">Contextual options (advantage, disadvantage, bonus, changing ability, etc.) are a WIP.</li>
             </ul>
 
             <!--  -->
@@ -135,7 +168,7 @@
                 <li>Using a higher level slot if available.</li>
                 <li>Creating a template on the map.</li>
                 <li>Updating concentration status when applicable.</li>
-                <li>Other options such as (dis)advantage, roll bonus, damage bonus, etc. are a WIP :).</li>
+                <li class="italic">Other options such as (dis)advantage, roll bonus, damage bonus, etc. are a WIP :).</li>
             </ul>
 
             <h3 class="margin-bottom-minus margin-top-plus">Toggle Spell Slot Directly</h3>
@@ -155,6 +188,11 @@
                 <li>If you are connected to a server with the premium module, the updates are sent to the server.</li>
                 <li>Slot/preparation edits are still reflected locally in local modes.</li>
             </ul>
+
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Features</h2>
+            <p class="margin-bottom-minus">Features are displayed in the "Features" tab and can be used just like spells. They are grouped by source (e.g. class, race, background, etc.).</p>
 
             <!--  -->
 
@@ -184,25 +222,6 @@
 
             <!--  -->
 
-            <h2 class="home-section-details-section-title">Conditions</h2>
-            <h3 class="margin-bottom-minus margin-top-plus">View Condition Description</h3>
-            <ol class="home-section-details-section-list">
-                <li>Tap a condition badge.</li>
-                <li>Condition dialog opens with name and description.</li>
-            </ol>
-
-            <h3 class="margin-bottom-minus margin-top-plus">Remove A Condition</h3>
-            <ol class="home-section-details-section-list">
-                <li>In the condition dialog, select Remove Condition.</li>
-            </ol>
-
-            <p class="bold margin-bottom-minus">Mode Note:</p>
-            <ul class="home-section-details-section-list">
-                <li>If server update is not possible, condition removal will only be applied locally.</li>
-            </ul>
-
-            <!--  -->
-
             <h2 class="home-section-details-section-title">Journal</h2>
             <p class="margin-bottom-minus">Journal entries are stored per actor and only locally.</p>
 
@@ -226,27 +245,50 @@
 
             <!--  -->
 
-            <h2 class="home-section-details-section-title">Health, Temp HP, And Rest</h2>
-            <p class="margin-bottom-minus">Click on the health bar to open health controls and apply damage, healing, temporary HP, and max HP modifier.</p>
+            <h2 class="home-section-details-section-title">Favorites</h2>
+            <p>Favorites let you pin frequently used items/spells/features.</p>
+
+            <h3 class="bold margin-bottom-minus margin-top-plus">To toggle a favorite:</h3>
+            <ol class="home-section-details-section-list">
+                <li>Open any row with a favorite icon.</li>
+                <li>Select the bookmark button.</li>
+            </ol>
+
+            <h3 class="bold margin-bottom-minus margin-top-plus">Expected behavior:</h3>
             <ul class="home-section-details-section-list">
-                <li>Damage subtracts temporary HP first, then current HP.</li>
-                <li>Healing cannot exceed current max HP.</li>
-                <li>Active temporary HP locks input until reset.</li>
-                <li>Max HP modifier are shown in details in the health controls (e.g. "35 / 40 (35+5)") but only final result is displayed in the health bar (e.g. "35 / 40").</li>
-                <li>Max HP modifiers stack on top of each other, you can reset them all at once with the "Reset" button.</li>
+                <li>Favorite state updates both in source list and Favorites tab.</li>
+                <li>Favorites are actor-specific and synced with the server.</li>
             </ul>
 
-            <h3 class="margin-bottom-minus margin-top-plus">Short And Long Rest</h3>
+            <p class="bold margin-bottom-minus">Mode note:</p>
             <ul class="home-section-details-section-list">
-                <li>Open short or long rest dialog from the side panel.</li>
-                <li>Choose options (New Day, Auto-Hit Dice, etc.).</li>
-                <li>Confirm rest action.</li>
+                <li>In local modes, favorite changes can still be saved locally.</li>
             </ul>
 
-            <p class="bold margin-bottom-minus">Mode Note:</p>
+            <!--  -->
+
+            <h2 class="home-section-details-section-title">Search And Filters</h2>
+            <p class="margin-bottom-minus">Search bars are tab-local and filter rows in real time.</p>
+
             <ul class="home-section-details-section-list">
-                <li>The app relies on the server to apply rest mechanics, recover resources, etc. In restricted modes, local data won't change.</li>
+                <li>Type in a tab search bar to hide non-matching rows.</li>
+                <li>Focusing a search bar clears text and resets visibility.</li>
             </ul>
+
+            <p class="bold margin-bottom-minus">Filter dialogs support 3-state options:</p>
+            <ul class="home-section-details-section-list">
+                <li>Neutral</li>
+                <li>Include</li>
+                <li>Exclude</li>
+            </ul>
+
+            <h3 class="margin-bottom-minus">Workflow:</h3>
+            <ol class="home-section-details-section-list">
+                <li>Open a filter dialog for spells or inventory.</li>
+                <li>Toggle options until desired state.</li>
+                <li>Apply to close and run filtering.</li>
+                <li>Reset to clear selected criteria.</li>
+            </ol>
         </section>
 
         <hr>

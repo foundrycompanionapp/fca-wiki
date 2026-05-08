@@ -1,4 +1,4 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="Foundry Companion App Logo" >
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="VTT Companion Logo" >
     <g fill="#590b08" stroke="#f5f6e7" stroke-width="2.5" stroke-linejoin="round" >
         <!-- D20 Outline -->
         <polygon points="100,10 180,60 160,160 40,160 20,60" />
@@ -12,8 +12,8 @@
 
     <!-- Center letters -->
     <g fill="#f5f6e7" font-weight="450" font-family="system-ui, sans-serif" text-anchor="middle" dominant-baseline="middle">
-        <text x="100" y="82">F</text>
+        <text x="100" y="82">V</text>
         <text x="100" y="107">C</text>
-        <text x="100" y="132">A</text>
+        <text x="100" y="132">S</text>
     </g>
 </svg>

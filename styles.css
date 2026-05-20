@@ -95,6 +95,10 @@ a, p, li, table {
     text-decoration: none;
 }
 
+th {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
 .a-btn, button {
     font-weight: 550;
     font-size: clamp(1.05rem, 2vw, 1.3rem);
@@ -578,7 +582,6 @@ hr {
 .info h2,
 .info h3,
 .info span,
-.info th,
 .info li::marker {
     color: var(--accent-txt-2);
 }
@@ -591,7 +594,6 @@ hr {
 .bug h2,
 .bug h3,
 .bug span,
-.bug th,
 .bug li::marker {
     color: var(--accent-txt-3);
 }
@@ -604,7 +606,6 @@ hr {
 .update h2,
 .update h3,
 .update span,
-.update th,
 .update li::marker {
     color: var(--accent-txt-1);
 }

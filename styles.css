@@ -7,12 +7,12 @@
     --accent-bg-3-opaque: #ae8604d5;
     --accent-bg-4: #124e78;
     --accent-bg-4-opaque: #124e78c6;
-    --accent-bg-5: #8f8f8f;
+    --accent-bg-5: #929292;
     --accent-txt-1: #f4cb44;
     --accent-txt-2: #dc672c;
     --accent-txt-3: #6094b6;
     --accent-txt-4: #aa7eff;
-    --accent-txt-5: #8f8f8f;
+    --accent-txt-5: #929292;
     --body-bg: #240503;
     --body-bg-opaque: #180202dc;
     --body-txt: #f5f6e7;
@@ -334,6 +334,10 @@ nav {
 
     padding: 1.25rem;
     width: 100%;
+}
+
+.package-section {
+    margin-top: 1rem;
 }
 
 .home-section-details-section-title {

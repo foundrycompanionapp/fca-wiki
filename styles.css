@@ -230,17 +230,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
 
     background-color: var(--body-bg-opaque);
     border-bottom: 0.1rem solid var(--border-1);
 }
 
 .logo{
-    position: absolute;
-    margin: 1rem;
+    /* position: absolute; */
+    margin: 1rem 2rem 1rem 1rem;
     width: 4.5rem;
     height: 4.5rem;
     font-size: 1.15rem;
@@ -253,8 +254,7 @@ nav {
     flex-wrap: wrap;
     gap: 1.25rem;
 
-    width: 70%;
-    margin: 1.5rem 1rem 1.5rem auto;
+    margin: 1.5rem 0rem 1.5rem 1rem;
 }
 
 .nav-btn {
